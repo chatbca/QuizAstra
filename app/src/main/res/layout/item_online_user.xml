@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="@color/colorBackground"
+    android:foreground="@drawable/glass_background"
+    android:elevation="2dp">
+
+    <TextView
+        android:id="@+id/textUserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="User Name"
+        android:textSize="16sp"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnChallenge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Challenge"
+        android:textAllCaps="false"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" />
+</LinearLayout>

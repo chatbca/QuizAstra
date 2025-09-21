@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.QuizAstra" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/activeGreen</item>
+        <item name="colorPrimaryVariant">@color/colorBackground</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Dark mode defaults -->
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:textColorPrimary">@color/textWhite</item>
+        <item name="android:textColorSecondary">@color/textWhiteFaded</item>
+        <item name="android:textColorHint">@color/textWhiteHint</item>
+        <item name="colorOnBackground">@color/textWhite</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

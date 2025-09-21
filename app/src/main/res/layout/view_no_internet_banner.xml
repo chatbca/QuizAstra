@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/no_internet_banner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#FF3B30"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:elevation="6dp">
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="no internet icon"
+        android:tint="#FFFFFF"
+        android:src="@android:drawable/stat_notify_error" />
+
+    <TextView
+        android:id="@+id/no_internet_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:text="No internet connection. Check your connection."
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:maxLines="2" />
+
+</LinearLayout>

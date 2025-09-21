@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="72dp"
+    android:height="72dp"
+    android:viewportWidth="72"
+    android:viewportHeight="72">
+    <!-- Outer circle (soft gold) -->
+    <path
+        android:fillColor="#FFF3C4"
+        android:pathData="M36,2a34,34 0 1,0 0,68a34,34 0 1,0 0,-68z"/>
+
+    <!-- Inner circle (gold) -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M36,8a28,28 0 1,0 0,56a28,28 0 1,0 0,-56z"/>
+
+    <!-- Ring highlight -->
+    <path
+        android:fillColor="#33FFFFFF"
+        android:pathData="M36,8a28,28 0 0,1 0,12a16,16 0 0,1 0,-12z"/>
+
+    <!-- Star (white) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M36,20 l6.18,12.53 13.82,2.01 -10,9.75 2.36,13.71L36,51.5 23.64,58 26,44.29 16,34.54 29.82,32.53z"/>
+
+    <!-- Ribbon left -->
+    <path
+        android:fillColor="#FFA000"
+        android:pathData="M22,56 l8,4 -8,8 z"/>
+
+    <!-- Ribbon right -->
+    <path
+        android:fillColor="#FFA000"
+        android:pathData="M50,56 l-8,4 8,8 z"/>
+</vector>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0B1E36">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Logo and App Title -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="Logo"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:id="@+id/app_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QuizAstra"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Header -->
+            <TextView
+                android:id="@+id/tvQuizCompleted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quiz Completed!"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:fontFamily="serif" />
+
+            <!-- Battle Result Banner (visible only for battle quizzes) -->
+            <TextView
+                android:id="@+id/tvBattleBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="12dp"
+                android:text=""
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/rounded_score_box" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You've finished the quiz. Here's how you did:"
+                android:textColor="#CCCCCC"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="italic"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="8dp" />
+
+            <!-- Score and Accuracy -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/tvScore"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Score\n9/10"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    android:background="@drawable/rounded_score_box"
+                    android:elevation="4dp"
+                    android:layout_margin="8dp"
+                    android:padding="12dp"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvAccuracy"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Accuracy\n80%"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    android:background="@drawable/rounded_score_box"
+                    android:elevation="4dp"
+                    android:layout_margin="8dp"
+                    android:padding="12dp"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <!-- Correct/Wrong Summary -->
+            <TextView
+                android:id="@+id/tvCorrectWrong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correct: 0   Wrong: 0"
+                android:textColor="#CCCCCC"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp" />
+
+            <!-- Review Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Review"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Review Container -->
+            <LinearLayout
+                android:id="@+id/reviewContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            </LinearLayout>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="32dp">
+
+                <Button
+                    android:id="@+id/btnLeaderboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rounded_leaderboard_button"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="View Leaderboard"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/rounded_back_button"
+                    android:text="Back to Dashboard"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation (included at bottom) -->
+    <include layout="@layout/bottom_nav_layout" />
+</LinearLayout>

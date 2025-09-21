@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/drawable/circle_background.xml" value="0.2585" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/drawable/circle_bronze.xml" value="0.2585" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/drawable/circle_gold.xml" value="0.2585" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/drawable/circle_silver.xml" value="0.2585" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/drawable/custom_scrollbar_thumb.xml" value="0.2585" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/drawable/glass_background.xml" value="0.1935" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/drawable/ic_arrow_back.xml" value="0.191" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/drawable/ic_badge_placeholder.xml" value="0.1935" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/drawable/ic_baseline_check_24.xml" value="0.2585" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2585" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/drawable/rounded_button.xml" value="0.191" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/drawable/rounded_green_button.xml" value="0.2585" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/drawable/rounded_leaderboard_button.xml" value="0.2585" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/drawable/rounded_score_box.xml" value="0.191" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/drawable/rounded_text.xml" value="0.191" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/drawable/stat_background.xml" value="0.1935" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/layout/activity_battle.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/layout/activity_leaderboard.xml" value="0.18" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/layout/activity_main.xml" value="0.35833333333333334" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/layout/activity_quiz_question.xml" value="0.33" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/layout/activity_splashscreen.xml" value="0.35833333333333334" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/layout/activity_user_dashboard.xml" value="0.25" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/layout/activity_user_login.xml" value="0.35833333333333334" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/layout/activity_user_profile.xml" value="0.33" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/layout/activity_user_register.xml" value="0.35833333333333334" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/layout/activity_user_result.xml" value="0.35833333333333334" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/layout/badge_item.xml" value="0.184375" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/layout/bottom_nav_layout.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/layout/item_battle_user.xml" value="0.18229166666666666" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/layout/item_category.xml" value="0.35833333333333334" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/layout/item_leaderboard.xml" value="0.5" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/layout/item_online_user.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/menu/bottom_nav_menu.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/QuizAstra/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2585" />
+        <entry key="..\:/Users/pc-10/AndroidStudioProjects/QuizAstra/app/src/main/res/drawable/rounded_button.xml" value="0.314" />
+        <entry key="..\:/Users/pc-10/AndroidStudioProjects/QuizAstra/app/src/main/res/drawable/rounded_text.xml" value="0.314" />
+        <entry key="..\:/Users/pc-10/AndroidStudioProjects/QuizAstra/app/src/main/res/layout/activity_splashscreen.xml" value="0.33" />
+        <entry key="..\:/Users/pc-10/AndroidStudioProjects/QuizAstra/app/src/main/res/layout/activity_user_login.xml" value="0.3605072463768116" />
+        <entry key="..\:/Users/pc-10/AndroidStudioProjects/QuizAstra/app/src/main/res/layout/activity_user_register.xml" value="0.3605072463768116" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="ms-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

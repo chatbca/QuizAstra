@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Barrel -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M4,6 H14 V9 H4 Z" />
+
+    <!-- Body -->
+    <path
+        android:fillColor="#FF9E9E9E"
+        android:pathData="M14,6 H20 V11 H14 Z" />
+
+    <!-- Trigger Guard -->
+    <path
+        android:fillColor="#FF757575"
+        android:pathData="M12,9 H14 V12 H12 A1,1 0 0 1 11,11 V10 A1,1 0 0 1 12,9 Z" />
+
+    <!-- Grip -->
+    <path
+        android:fillColor="#FF616161"
+        android:pathData="M18,11 H20 V18 H17 Z" />
+</vector>
