@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "977582687713",
+    "firebase_url": "https://quizastra-330f6-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "quizastra-330f6",
+    "storage_bucket": "quizastra-330f6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977582687713:android:5918232ebd1fd6edfdbea0",
+        "android_client_info": {
+          "package_name": "com.example.secondapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-bWiSirY5gnEb35NE2TYBgV7Rge7nZas"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977582687713:android:9d6a6c1e0efb51b1fdbea0",
+        "android_client_info": {
+          "package_name": "com.example.user_p"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-bWiSirY5gnEb35NE2TYBgV7Rge7nZas"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

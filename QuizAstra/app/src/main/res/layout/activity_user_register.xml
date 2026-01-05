@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ViewFlipper to handle multiple registration steps -->
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground">
+
+        <!-- Step 0: About QuizAstra -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="QuizAstra"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/textWhite"
+                android:layout_marginBottom="12dp" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="274dp">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="323dp"
+                    android:layout_height="264dp"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/logo" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="• QuizAstra helps you learn with engaging quizzes across computer science domain topics.\n• Track progress and monitor improvements.\n• Challenge friends to compete."
+                android:textColor="@color/textWhite"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Developed by:\n• Neelanjan V\n• Aneesh\n• Darshan\n•Prajwal\n•Sameeksha\n• Soumya\nMCA Students of Poornaprajna Institute of Management"
+                android:textColor="@color/textWhite"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="16dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="✨ QuizAstra – Battle with Brains"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/tealBright"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnNextAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:text="Next"
+                android:textAllCaps="false" />
+
+
+        </LinearLayout>
+
+        <!-- Step 1: Create Account -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Back button and title -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <View
+                    android:layout_width="48dp"
+                    android:layout_height="48dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Create Account"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textWhite"
+                    android:gravity="center" />
+
+                <View
+                    android:layout_width="48dp"
+                    android:layout_height="48dp" />
+            </LinearLayout>
+
+            <!-- Account form -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textSize="16sp"
+                    android:textColor="@color/textWhite"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your password"
+                    android:background="@drawable/rounded_text"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp"
+                    android:inputType="textPassword"
+                    android:textColor="@color/textWhite"
+                    android:textColorHint="@color/textWhiteHint"
+                    android:drawableEnd="@android:drawable/ic_menu_view"
+                    android:drawablePadding="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Password Strength"
+                    android:textSize="16sp"
+                    android:textColor="@color/textWhite"
+                    android:layout_marginBottom="8dp" />
+
+                <ProgressBar
+                    android:id="@+id/passwordStrengthBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:progress="20"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvPasswordStrength"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Weak"
+                    android:textSize="14sp"
+                    android:textColor="@color/textWhite"
+                    android:layout_marginBottom="24dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Confirm Password"
+                    android:textSize="16sp"
+                    android:textColor="@color/textWhite"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Confirm your password"
+                    android:background="@drawable/rounded_text"
+                    android:padding="12dp"
+                    android:inputType="textPassword"
+                    android:textColor="@color/textWhite"
+                    android:textColorHint="@color/textWhiteHint"
+                    android:drawableEnd="@android:drawable/ic_menu_view"
+                    android:drawablePadding="8dp" />
+            </LinearLayout>
+
+            <!-- Navigation buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/btnBackStep1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Back"
+                    android:textAllCaps="false"
+                    android:background="@drawable/rounded_text"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/btnNextStep1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Next"
+                    android:textAllCaps="false"
+                    android:background="@drawable/rounded_button"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Step 2: Profile Photo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Back button and title -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <ImageButton
+                    android:id="@+id/btnBackPhoto"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_arrow_back"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Back" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Profile Photo"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textWhite"
+                    android:gravity="center" />
+
+                <View
+                    android:layout_width="48dp"
+                    android:layout_height="48dp" />
+            </LinearLayout>
+
+            <!-- Profile photo selection -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/avatar_default"
+                    android:layout_marginBottom="32dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add a profile photo to personalize your account"
+                    android:textSize="16sp"
+                    android:textColor="@color/textWhite"
+                    android:gravity="center"
+                    android:layout_marginBottom="24dp" />
+
+                <Button
+                    android:id="@+id/btnUploadPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Upload from Gallery"
+                    android:textAllCaps="false"
+                    android:background="@drawable/rounded_button"
+                    android:layout_marginBottom="16dp" />
+
+                <Button
+                    android:id="@+id/btnTakePhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Take a Photo"
+                    android:textAllCaps="false"
+                    android:background="@drawable/rounded_button" />
+            </LinearLayout>
+
+            <!-- Navigation buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/btnBackStep2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Back"
+                    android:textAllCaps="false"
+                    android:background="@drawable/rounded_text"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/btnNextStep2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Next"
+                    android:textAllCaps="false"
+                    android:background="@drawable/rounded_button"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Step 3: Personal Information (moved before Terms) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Back button and title -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <ImageButton
+                    android:id="@+id/btnBackPersonal"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_arrow_back"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Back" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Personal Information"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textWhite"
+                    android:gravity="center" />
+
+                <View
+                    android:layout_width="48dp"
+                    android:layout_height="48dp" />
+            </LinearLayout>
+
+            <!-- Personal information form -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Full Name"
+                    android:textSize="16sp"
+                    android:textColor="@color/textWhite"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your full name"
+                    android:background="@drawable/rounded_text"
+                    android:padding="12dp"
+                    android:layout_marginBottom="24dp"
+                    android:textColor="@color/textWhite"
+                    android:textColorHint="@color/textWhiteHint"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="16sp"
+                    android:textColor="@color/textWhite"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your email"
+                    android:background="@drawable/rounded_text"
+                    android:padding="12dp"
+                    android:textColor="@color/textWhite"
+                    android:textColorHint="@color/textWhiteHint"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginBottom="24dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Phone Number"
+                    android:textSize="16sp"
+                    android:textColor="@color/textWhite"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etPhoneReg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your phone number"
+                    android:background="@drawable/rounded_text"
+                    android:padding="12dp"
+                    android:textColor="@color/textWhite"
+                    android:textColorHint="@color/textWhiteHint"
+                    android:inputType="phone"
+                    android:layout_marginBottom="24dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date of Birth"
+                    android:textSize="16sp"
+                    android:textColor="@color/textWhite"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etDob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Select your date of birth"
+                    android:background="@drawable/rounded_text"
+                    android:padding="12dp"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:textColor="@color/textWhite"
+                    android:textColorHint="@color/textWhiteHint" />
+            </LinearLayout>
+
+            <!-- Finish button -->
+            <Button
+                android:id="@+id/btnFinishRegistration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:background="@drawable/rounded_button"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+
+        <!-- Step 4: Terms & Conditions (moved after Personal) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Back button and title -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <ImageButton
+                    android:id="@+id/btnBackTerms"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_arrow_back"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Back" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Terms &amp; Conditions"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textWhite"
+                    android:gravity="center" />
+
+                <View
+                    android:layout_width="48dp"
+                    android:layout_height="48dp" />
+            </LinearLayout>
+
+            <!-- Terms content -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• Welcome to QuizAstra!\n• By using our app, you agree to these terms.\n• Please read them carefully."
+                        android:textSize="16sp"
+                        android:textColor="@color/textWhite"
+                        android:layout_marginBottom="24dp" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Summary of Terms"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/textWhite"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1. QuizAstra is a platform for educational quizzes. 2. Users must be 13 years or older. 3. Content is for personal, non-commercial use. 4. We respect your privacy; see our Privacy Policy. 5. QuizAstra is not liable for user-generated content. 6. We may update these terms; continued use implies acceptance. 7. QuizAstra can terminate accounts for violations. 8. Users are responsible for their account security. 9. QuizAstra owns all intellectual property. 10. Disputes will be resolved under the laws of the jurisdiction."
+                        android:textSize="14sp"
+                        android:textColor="@color/textWhite" />
+
+                    <CheckBox
+                        android:id="@+id/checkboxTerms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="I agree to the Terms &amp; Conditions"
+                        android:textColor="@color/textWhite"
+                        android:layout_marginTop="24dp" />
+                </LinearLayout>
+            </ScrollView>
+
+            <!-- Navigation buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/btnBackStep3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Back"
+                    android:textAllCaps="false"
+                    android:background="@drawable/rounded_text"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/btnNextStep3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Finish Registration"
+                    android:textAllCaps="false"
+                    android:background="@drawable/rounded_button"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Step 5: Welcome Screen -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="QuizAstra"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/textWhite"
+                android:gravity="center"
+                android:layout_marginBottom="24dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="274dp">
+
+                <ImageView
+                    android:id="@+id/lo"
+                    android:layout_width="323dp"
+                    android:layout_height="264dp"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/logo" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Welcome to QuizAstra"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/textWhite"
+                android:gravity="center"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Begin your quiz journey."
+                android:textSize="18sp"
+                android:textColor="@color/textWhite"
+                android:gravity="center"
+                android:layout_marginBottom="48dp" />
+
+            <Button
+                android:id="@+id/btnGetStarted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Get Started"
+                android:textAllCaps="false"
+                android:background="@drawable/rounded_button"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
+    </ViewFlipper>
+</FrameLayout>

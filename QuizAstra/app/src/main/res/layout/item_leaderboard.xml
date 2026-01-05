@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/glass_background"
+    android:gravity="center_vertical">
+
+    <!-- Rank chip -->
+    <TextView
+        android:id="@+id/textRank"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:text="4"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/circle_background"
+        android:layout_marginEnd="12dp"/>
+
+    <!-- Avatar -->
+    <ImageView
+        android:id="@+id/userAvatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/avatar_default"
+        android:contentDescription="User Avatar" />
+
+    <!-- Name and subtitle -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rank #4"
+            android:textColor="#CCCCCC"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <!-- Score chip -->
+    <TextView
+        android:id="@+id/textScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="980 pts"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:background="@drawable/rounded_score_box"/>
+
+</LinearLayout>

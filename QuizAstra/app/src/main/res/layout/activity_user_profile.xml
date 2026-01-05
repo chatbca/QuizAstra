@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:ignore="MissingPrefix">
+    <!-- Top Bar: Logo, Title, Share (top-right) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Logo"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QuizAstra"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/ibEditProfile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Edit Profile"
+            android:padding="6dp"
+            android:src="@android:drawable/ic_menu_edit"
+            android:layout_marginEnd="4dp"/>
+
+        <ImageButton
+            android:id="@+id/ibShareProfile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Share Profile"
+            android:padding="6dp"
+            android:src="@android:drawable/ic_menu_share"/>
+    </LinearLayout>
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <!-- Profile Image (tappable in edit mode to change) -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="70dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true"
+                app:cardPreventCornerOverlap="true">
+
+                <ImageView
+                    android:id="@+id/imageProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/avatar_default" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Hint shown in edit mode -->
+            <TextView
+                android:id="@+id/textPhotoHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tap to change photo"
+                android:textColor="#CCCCCC"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Name -->
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USER NAME"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            
+
+            <!-- Email (view mode) -->
+            <TextView
+                android:id="@+id/textEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="user@example.com"
+                android:textColor="#DDDDDD"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Phone (view mode) -->
+            <TextView
+                android:id="@+id/textPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0 0000000000"
+                android:textColor="#DDDDDD"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- DOB (view mode) -->
+            <TextView
+                android:id="@+id/textDob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DOB: --/--/----"
+                android:textColor="#DDDDDD"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Bio (view mode) -->
+            <TextView
+                android:id="@+id/textBio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bio: Lifelong learner."
+                android:textColor="#DDDDDD"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Edit fields (edit mode) -->
+            <LinearLayout
+                android:id="@+id/editContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginBottom="12dp">
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Full name"
+                    android:background="@drawable/rounded_text"
+                    android:padding="12dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#99FFFFFF"
+                    android:layout_marginBottom="8dp" />
+
+                
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:background="@drawable/rounded_text"
+                    android:padding="12dp"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#99FFFFFF"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone"
+                    android:background="@drawable/rounded_text"
+                    android:padding="12dp"
+                    android:inputType="phone"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#99FFFFFF"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etDob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Date of Birth (tap to pick)"
+                    android:background="@drawable/rounded_text"
+                    android:padding="12dp"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#99FFFFFF"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etBio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Bio"
+                    android:background="@drawable/rounded_text"
+                    android:padding="12dp"
+                    android:lines="3"
+                    android:gravity="top|start"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#99FFFFFF" />
+
+                <!-- Password change section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change Password"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="6dp"/>
+
+                <EditText
+                    android:id="@+id/etCurrentPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Current password"
+                    android:background="@drawable/rounded_text"
+                    android:padding="12dp"
+                    android:inputType="textPassword"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#99FFFFFF"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etNewPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="New password"
+                    android:background="@drawable/rounded_text"
+                    android:padding="12dp"
+                    android:inputType="textPassword"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#99FFFFFF"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etConfirmNewPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Confirm new password"
+                    android:background="@drawable/rounded_text"
+                    android:padding="12dp"
+                    android:inputType="textPassword"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#99FFFFFF" />
+            </LinearLayout>
+
+            <!-- Removed small edit button for cleaner Instagram-like header -->
+
+            <LinearLayout
+                android:id="@+id/saveCancelContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:id="@+id/btnSaveProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:background="@drawable/rounded_green_button"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/btnCancelEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cancel"
+                    android:textAllCaps="false"
+                    android:background="@drawable/rounded_text"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Stats -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_marginBottom="12dp">
+
+                <!-- Quizzes Taken -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/glass_background"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/textQuizzes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="120"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quizzes Taken"
+                        android:textColor="#CCCCCC"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Best Score -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/glass_background"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/textScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="85"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Best Score"
+                        android:textColor="#CCCCCC"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Current Streak -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/glass_background"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/textStreak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Current Streak"
+                        android:textColor="#CCCCCC"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Removed Profile Completion section -->
+
+            <!-- Removed Quick Actions row (Edit/Leaderboard/Share buttons) -->
+
+            
+
+            <!-- Battles Stats Row (replaces Recent Activity/Profile Completion) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/glass_background"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/textWins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Battles Won"
+                        android:textColor="#CCCCCC"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/glass_background"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/textLosses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Battles Lost"
+                        android:textColor="#CCCCCC"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <include
+        layout="@layout/bottom_nav_layout" />
+</LinearLayout>
