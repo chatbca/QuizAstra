@@ -1,5 +1,4 @@
 QuizAstra – Android Quiz Application
-Team Project led by Neelanjan V | Team Members: Aneesh, Darshan, Prajwal, Sameeksha, Soumya
 
 Developed an enterprise-grade Android quiz ecosystem consisting of a User App for learners and an Admin Panel for content and user management. Built with Java 8, Firebase Realtime Database, and Material Design 3, the system supports real-time multiplayer battles, global leaderboards, and secure data handling.
 1.User Application
